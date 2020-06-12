@@ -8,7 +8,11 @@ const app = express();
 const { database } = require("./config");
 
 //require route
-const userRoute=require("./routes/userRoutes");
+const userRoute = require("./routes/userRoutes");
+
+//adding express body parser
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 // initialize database
 
@@ -29,7 +33,7 @@ app.get("/", function (req, res) {
   res.send("hello");
 });
 
-app.use('/', userRoute);
+app.use("/api/", userRoute);
 
 const port = process.env.PORT || 5000;
 
