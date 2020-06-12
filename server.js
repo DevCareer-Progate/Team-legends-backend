@@ -7,6 +7,9 @@ const app = express();
 //require config.js and destructure
 const { database } = require("./config");
 
+//require route
+const userRoute=require("./routes/userRoutes");
+
 // initialize database
 
 mongooose
@@ -25,6 +28,8 @@ mongooose
 app.get("/", function (req, res) {
   res.send("hello");
 });
+
+app.use('/', userRoute);
 
 const port = process.env.PORT || 5000;
 
