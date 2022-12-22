@@ -33,7 +33,7 @@
     "crypto": "^1.0.1",
     "email-templates": "^7.0.5",
     "express": "^4.17.1",
-    "jsonwebtoken": "^8.5.1",
+    "jsonwebtoken": "^9.0.0",
     "mongoose": "^5.9.18",
     "nodemailer": "^6.4.8",
     "nodemailer-express-handlebars": "^4.0.0",
